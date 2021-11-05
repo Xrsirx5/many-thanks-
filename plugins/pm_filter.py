@@ -418,7 +418,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
             InlineKeyboardButton('🤖 Updates', url='https://t.me/noughtyland)
             ],[
-            InlineKeyboardButton('ℹ️ Help', callback_data='help'),
+            InlineKeyboardButton('😣 Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -679,7 +679,16 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I cant find any movie so please Check in google<b>.")
+        k = await msg.reply("I cant find any movie so please Check in google<b>.,
+        reply_to_message_id=message.message_id,
+            reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton("📢 Google 📢", url="www.google.com/")
+                        ]
+                    ]
+                )
+            )    
         await asyncio.sleep(8)
         await k.delete()
         return
