@@ -679,7 +679,7 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I cant find any movie so please Check in google<b>.,
+        k = await msg.reply("I<b> cant find any movie so please Check in ഗൂഗിൾ </b>.,
         reply_to_message_id=message.message_id,
             reply_markup=InlineKeyboardMarkup(
                     [
