@@ -712,7 +712,7 @@ async def advantage_spell_chok(msg):
             if imdb_s:
                 movielist += [movie.get('title') for movie in imdb_s]
     if not movielist:
-        k = await msg.reply("I cant find anything related to that. Checke your spelling")
+        k = await msg.reply("I അനക് കാട്ടുപിആൻ ആവില്ല ഗയ്‌സ് ബെചൌസ് ഞാൻ ഒരു റോബോട് ആണ് അടുകൊടു കറക്റ്റ് സ്‌പ്ലെല്ല് താ . Check your spelling in google<b>😊")
         await asyncio.sleep(8)
         await k.delete()
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
@@ -724,8 +724,8 @@ async def advantage_spell_chok(msg):
                     callback_data=f"spolling#{user}#{k}",
                 )
             ] for k, movie in enumerate(movielist)]
-    btn.append([InlineKeyboardButton(text="Close", callback_data=f'spolling#{user}#close_spellcheck')])
-    await msg.reply('I cant find anything related to that\nDid you mean any one of these?', reply_markup=InlineKeyboardMarkup(btn))
+    btn.append([InlineKeyboardButton(text="ok", callback_data=f'spolling#{user}#close_spellcheck')])
+    await msg.reply('I കാന്റീൻ ഫിന്ദ്‌ മൂവി റിലേറ്റഡ്ടു  ദാറ്റ്‌ \nണ്ടിട്യൂ  മീൻ എനി ഓൺ ഓഫ് തെസ് 😎?', reply_markup=InlineKeyboardMarkup(btn))
     
 
 
